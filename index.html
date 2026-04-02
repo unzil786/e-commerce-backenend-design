@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design by Sole | Premium Women's Footwear</title>
+    <meta name="description"
+        content="Shop the latest heels, sandals, and shoes for women at Design by Sole â€” Premium quality footwear.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <p>ðŸŽ‰ FREE DELIVERY on all orders above Rs 2,999 | Use Code: <strong>SOLE10</strong> for 10% off</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-wrap">
+                <h1 class="logo-text">Design by<span>Sole</span></h1>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collections">Shop</a></li>
+                <li><a href="#login" class="nav-btn btn-outline"><i class="fa-regular fa-user"></i> Login</a></li>
+                <li><a href="#signup" class="nav-btn btn-fill">Sign Up</a></li>
+                <li><a href="#contact" class="nav-btn btn-outline"><i class="fa-regular fa-envelope"></i> Contact</a>
+                </li>
+                <li><a href="#admin" id="admin-link" class="nav-btn btn-admin"><i class="fa-solid fa-lock"></i>
+                        Admin</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="icon-btn cart-wrap" title="Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-slide active"
+            style="background-image: url('https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-tag">New Arrivals 2026</span>
+                <h2>Walk with <em>Confidence</em></h2>
+                <p>Heels, Flats, Sandals & more for the Modern Woman</p>
+                <div class="hero-btns">
+                    <a href="#collections" class="btn btn-hero">Shop Now</a>
+                    <a href="#collections" class="btn btn-ghost">View All</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Tiles (like Stylo) -->
+    <section class="cat-tiles-section">
+        <div class="cat-tiles-grid">
+            <div class="cat-tile" onclick="filterCat('Heels')">
+                <img src="https://stylo.pk/cdn/shop/files/FN626113_2_e6c63bc3-9ff9-41a7-b376-6124e0afd59f.png?v=1770034063&width=600" alt="Heels">
+                <div class="cat-label">Heels</div>
+            </div>
+            <div class="cat-tile" onclick="filterCat('Sandals')">
+                <img src="https://stylo.pk/cdn/shop/files/PU0367-01-36.png?v=1765533831&width=600" alt="Sandals">
+                <div class="cat-label">Sandals</div>
+            </div>
+            <div class="cat-tile" onclick="filterCat('Shoes')">
+                <img src="https://unze.com.pk/cdn/shop/files/l42870_d73d6e82-1a2b-4427-9cdc-53bfb41f2e28.jpg?v=1773030891"
+                    alt="Shoes">
+                <div class="cat-label">Shoes</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections -->
+    <section id="collections" class="collection-section">
+        <div class="collection-header">
+            <h3 class="section-title">Our Collection</h3>
+            <p class="section-subtitle">Handpicked Styles Ã¢â‚¬â€ Just For You</p>
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Heels">Heels</button>
+            <button class="filter-btn" data-filter="Sandals">Sandals</button>
+            <button class="filter-btn" data-filter="Shoes">Shoes</button>
+        </div>
+        <div class="products-grid" id="products-container"></div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="promo-content">
+            <h3>Get 20% Off Your First Order</h3>
+            <p>Sign up to our newsletter and never miss a new drop!</p>
+            <form class="promo-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                <input type="email" placeholder="Enter your email" required>
+                <button class="btn" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Login / Signup / Contact -->
+    <section class="forms-wrapper" id="login">
+        <div class="forms-grid">
+            <div class="form-card">
+                <h3><i class="fa-regular fa-user"></i> Login</h3>
+                <form id="login-form" class="custom-form">
+                    <input type="email" id="login-email" placeholder="Email Address" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button class="btn btn-full" type="submit">Login</button>
+                    <p class="form-link">New here? <a href="#signup">Create Account</a></p>
+                </form>
+            </div>
+            <div class="form-card" id="signup">
+                <h3><i class="fa-solid fa-user-plus"></i> Sign Up</h3>
+                <form id="signup-form" class="custom-form">
+                    <input type="text" id="signup-name" placeholder="Full Name" required>
+                    <input type="email" id="signup-email" placeholder="Email Address" required>
+                    <input type="tel" id="signup-phone" placeholder="Phone Number">
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <button class="btn btn-full btn-pink" type="submit">Create Account</button>
+                </form>
+            </div>
+            <div class="form-card" id="contact">
+                <h3><i class="fa-regular fa-envelope"></i> Contact Us</h3>
+                <form id="contact-form" class="custom-form">
+                    <input type="text" id="contact-name" placeholder="Your Name" required>
+                    <input type="email" id="contact-email" placeholder="Email Address" required>
+                    <textarea id="contact-message" placeholder="How can we help you?" rows="4" required></textarea>
+                    <button class="btn btn-full" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Dashboard (hidden) -->
+    <section id="admin-dashboard" style="display:none; padding: 4rem 5%;">
+        <div class="form-card" style="max-width: 600px; margin: 0 auto;">
+            <h3 style="color:#d4af37;"><i class="fa-solid fa-screwdriver-wrench"></i> Admin Panel</h3>
+            <form id="admin-form" class="custom-form">
+                <input type="text" id="admin-name" placeholder="Product Name" required>
+                <select id="admin-category" required>
+                    <option value="" disabled selected>Category</option>
+                    <option value="Heels">Heels</option>
+                    <option value="Sandals">Sandals</option>
+                    <option value="Shoes">Shoes</option>
+                </select>
+                <input type="number" id="admin-price" placeholder="Price (Rs)" required>
+                <input type="url" id="admin-img" placeholder="Product Image URL">
+                <button class="btn btn-full" type="submit" style="background:#111; color:#d4af37;">Add Product</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h2 class="footer-logo">Design by<span>Sole</span></h2>
+                <p>Premium footwear for every occasion. Step into elegance.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collections">Shop</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#collections">Heels</a></li>
+                    <li><a href="#collections">Sandals</a></li>
+                    <li><a href="#collections">Shoes</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Design by Sole. All rights reserved.</p>
+            <p>Made with Ã¢ÂÂ¤Ã¯Â¸Â in Pakistan</p>
+        </div>
+    </footer>
+
+    <script src="shoes.js?v=7"></script>
+</body>
+
+</html>
+
